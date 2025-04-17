@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./index.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="logotipo">
+      <a href="#"><img alt="Logotipo" src="./sources/logotipo-hor-rawlog-w.png"></a>
+    </header>
+    <div class="iphone-14-15-pro-max-1">
+      <picture>
+        <source media="(max-width: 640px)" width="100%" srcset="sources/img.png">
+        <source media="(min-width: 641px) and (max-width: 1368px)" width="100%" srcset="sources/img-1280.png">
+        <source media="(min-width: 1920px)" width="100%" srcset="sources/img-1920.png">
+        <img src="sources/img-1920.png" alt="Banner-landpage">
+      </picture>
+      <div class="lanamento-nova-container">
+        <p>Novo conceito em entregas</p>
+        <h1>Vem aí a nova RawLog!</h1>
+      </div>
+      <div class="desc">
+        <p>Preencha o formulário e ganhe</p>
+        <h1><b>
+          descontos exclusivos
+        </b></h1>
+        <p>*Conforme o regulamento</p>
+      </div>
+    </div>
+    <div>
+      <form action="" method="get">
+        <fieldset>
+          <fieldset class="capta" >
+            <label>Nome Completo<input class="inputs" type="text" id="nome-completo" name="nome-completo" placeholder="Nome completo" required></label>
+            <br><label>Data de nascimento<input class="inputs" type="date" id="birthday" name="birthday" required></label>
+            </select>
+          </fieldset>
+          <fieldset class="capta2 capta">
+            <label for="tel">Telefone<br><input class="ddd" type="tel" id="telefone" name="ddd" placeholder="DDD" required><input class="inputs" style="width: 81%; margin-left: 10px;" type="tel" id="telefone" name="telefone" placeholder="Telefone" required></label>
+            <br><label>E-mail<br><input class="inputs" type="tmail" id="email" name="email" placeholder="email"></label>
+          </fieldset>
+          <fieldset class="quest">
+            <label for="unidade">No que podemos te ajudar?</label>
+            <select name="unidade" id="unidade" required>
+              <option value="">Selecione</option>
+              <option value="Entrega rápida">Entrega rápida</option>
+              <option value="Mala direta">Mala direta</option>
+              <option value="Carga de valor">Carga de valor</option>
+              <option value="Documentos">Documentos</option>
+            </select>
+            <label for="obs">Observações<textarea id="obs" name="obs" row="4" cols="50" placeholder="Têm alguma restrição?"></textarea></label>
+          </fieldset>
+          <button type="submit" value="Enviar">Enviar</button>
+        </fieldset>
+      </form>
+    </div>
+    <div>
+      <h1><b>Você fez a escolha certa!</b></h1>
+      <h3>Logo mais um dos nossos consultores <br>entrará em contato com você</p>
+    </div>
+    <div class="wpp-btn">
+      <a href="https://wa.me/5519982388793?text=Olá%20Gostaria%20de%20saber%20mais%20sobre%20esta%20nova%20unidade" target="_blank"><img src="./sources/wpp-btn.png" alt="chat-wpp" width="60px" height="60px">
+      </a>
+    </div>
+    <button id="topBtn" title="Voltar ao Topo"><img src="./sources/topbtn.svg" alt="voltar ao topo" width="25px"></button>
+    
+    <script>
+      // Pega o botão
+      let topButton = document.getElementById("topBtn");
+
+      // Mostra o botão quando o usuário rolar 20px para baixo
+      window.onscroll = function() {
+          scrollFunction();
+      };
+
+      function scrollFunction() {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              topButton.style.display = "block";
+          } else {
+              topButton.style.display = "none";
+          }
+      }
+
+      // Quando o usuário clicar no botão, rola a página para o topo
+      topButton.onclick = function() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      };
+    </script>
+    <footer class="footer">
+      <div class="info-footer">
+        <h2>Contato</h2>
+        <a href="" target="blank" alt="Whatsapp"><p>WhatsApp</p></a>
+        <a href="" target="blank" alt="Fale Conosco"><p>Fale conosco</p></a>
+        <a href="mailto:contato@rawlog.com.br" target="blank" alt="contato@rawlog.com.br"><p>contato@rawlog.com.br</p></a>
+        <a href="https://transwar.minhacarga.net" target="blank" alt="Perguntas frequentes"><p>Perguntas Frequentes</p></a>
+      </div>
+      <div class="info-footer">
+        <h2>Endereço</h2>
+        <p>Dr. Gustavo Orsolini, 2735 - Jardim Nova Mercedes</p>
+      </div>
+      <div class="info-footer">
+        <h2>Parceiros</h2>
+        <a href="https://transwar.com.br" target="blank" alt="TransWar"><p>TransWar</p></a>
+      </div>
+      <div class="info-dev">
+        <hr>
+      <p>Desenvolvido pela  <a href="https://agbesolucoes.com.br/" target="_blank" alt="AGbe soluções"><img src="./sources/logotipo-agbe-solucoes-white.svg" alt="agbe soluções" width="75px" height="50px" style="margin-top: 0px; vertical-align:middle;"></a></p>
+      </div>
+    </footer>
+  </body>
+</html>
